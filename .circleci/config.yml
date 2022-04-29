@@ -33,6 +33,10 @@ jobs:
          keys:
            - "npm-pack"
       - run: npm audit
+      - run:
+          command: |
+             npm audit fix
+          when: on_fail
 
 
 workflows:
